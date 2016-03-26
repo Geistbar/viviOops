@@ -649,6 +649,7 @@ void main()
 		cli_execute("autoVolcano.ash");
 	if (user_confirm("Run autoConspiracy?"))
 		cli_execute("autoConspiracy.ash");
+	cli_execute("aa beach");
 	
 	// No or minimal turn use
 	if (user_confirm("Use fancy buffys & eat/drink?"))
