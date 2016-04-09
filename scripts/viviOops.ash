@@ -342,9 +342,20 @@ void brickos()
 /*******************************************************/
 void fax()
 {
-	take_stash(1,$item[spooky putty sheet]);
 	if (item_amount($item[photocopied monster]) == 0)
-		cli_execute("faxbot embezzler");
+	{
+		cli_execute("fax get");
+		if (!visit_url("desc_item.php?whichitem=835898159").contains_text("Embezzler"))
+		{
+			cli_execute("/whitelist generic clan name");
+			cli_execute("fax get");
+			cli_execute("/whitelist the clan of intelligent people");
+		}
+		if (!visit_url("desc_item.php?whichitem=835898159").contains_text("Embezzler"))
+			cli_execute("faxbot embezzler");
+	}
+	
+	take_stash(1,$item[spooky putty sheet]);
 	cli_execute("outfit Meat1");
 	
 	cli_execute("ccs Meat1");
@@ -504,7 +515,7 @@ void rollover()
 	put_closet(item_amount($item[rubber nubbin]),$item[rubber nubbin]);
 	//cli_execute("PvPItemCheck.ash");
 	// Get ready for rollover
-	cli_execute("faxbot embezzler");
+	cli_execute("fax get");
 	equip($item[Pantsgiving]);
 	while (get_property("timesRested").to_int() < total_free_rests())
 		cli_execute("rest");
