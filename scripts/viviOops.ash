@@ -347,9 +347,9 @@ void fax()
 		cli_execute("fax get");
 		if (!visit_url("desc_item.php?whichitem=835898159").contains_text("Embezzler"))
 		{
-			cli_execute("/whitelist generic clan name");
+			cli_execute("clanhop.ash (generic clan name)");
 			cli_execute("fax get");
-			cli_execute("/whitelist the clan of intelligent people");
+			cli_execute("clanhop.ash (Thud!)");
 		}
 		if (!visit_url("desc_item.php?whichitem=835898159").contains_text("Embezzler"))
 			cli_execute("faxbot embezzler");
