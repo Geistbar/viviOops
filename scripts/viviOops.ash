@@ -82,6 +82,8 @@ void bootsRun(int times, location place)
 /*******************************************************/
 void getChibiBuff()
 {
+	visit_url("inv_use.php?pwd&whichitem=5925");
+	visit_url("choice.php?pwd&option=1&whichchoice=633&chibiname=your butt");
 	if (!contains_text(visit_url("inv_use.php?pwd&whichitem=5908"),"Have a ChibiChat"))
 	{
 		visit_url("inv_use.php?pwd&whichitem=5908");
@@ -89,11 +91,11 @@ void getChibiBuff()
 		visit_url("inv_use.php?pwd&whichitem=5925");
 		visit_url("choice.php?pwd&option=1&whichchoice=633&chibiname=your butt");
 	}
-	else if (item_amount($item[ChibiBuddy&trade; (on)]) == 0)
+/* 	else if (item_amount($item[ChibiBuddy&trade; (on)]) == 0)
 	{
 		visit_url("inv_use.php?pwd&whichitem=5925");
 		visit_url("choice.php?pwd&option=1&whichchoice=633&chibiname=your butt");
-	}
+	} */
 	visit_url("inv_use.php?pwd&whichitem=5908");
 	visit_url("choice.php?pwd&option=5&whichchoice=627");
 }
