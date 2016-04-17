@@ -295,7 +295,7 @@ void buffs(boolean consume)
 	getUse(1,$item[Knob Goblin nasal spray]);
 	//getUse(1,$item[resolution: be wealthier]);
 	//getUse(1,$item[Meat-inflating powder]);
-	getChibiBuff();
+	//getChibiBuff();
 	cli_execute("summon 2");
 	cli_execute("hatter 22");
 	cli_execute("concert 2");
