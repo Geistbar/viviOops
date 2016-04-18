@@ -299,6 +299,11 @@ void buffs(boolean consume)
 	cli_execute("summon 2");
 	cli_execute("hatter 22");
 	cli_execute("concert 2");
+	// Witchness buff
+	visit_url("campground.php?action=witchess");
+	run_choice(3);
+	run_choice(3);
+	// Hop
 	cli_execute("clanhop.ash (The Clan Of Intelligent People)");
 	cli_execute("pool 1");
 	cli_execute("clanhop.ash (Thud!)");
