@@ -354,6 +354,7 @@ void fax()
 		cli_execute("fax get");
 		if (!visit_url("desc_item.php?whichitem=835898159").contains_text("Embezzler"))
 		{
+			cli_execute("fax put");
 			cli_execute("clanhop.ash (generic clan name)");
 			cli_execute("fax get");
 			cli_execute("clanhop.ash (Thud!)");
