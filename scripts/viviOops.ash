@@ -1,4 +1,4 @@
-script "ViviDay.ash"
+script "ViviOops.ash"
 import <zlib.ash>
 /*******************************************************
 *	ViviDay.ash
@@ -296,6 +296,7 @@ void buffs(boolean consume)
 	//getUse(1,$item[resolution: be wealthier]);
 	//getUse(1,$item[Meat-inflating powder]);
 	//getChibiBuff();
+	cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat");
 	cli_execute("summon 2");
 	cli_execute("hatter 22");
 	cli_execute("concert 2");
@@ -523,7 +524,7 @@ void rollover()
 	put_closet(item_amount($item[rubber nubbin]),$item[rubber nubbin]);
 	//cli_execute("PvPItemCheck.ash");
 	// Get ready for rollover
-	cli_execute("fax get");
+	//cli_execute("fax get");
 	equip($item[Pantsgiving]);
 	while (get_property("timesRested").to_int() < total_free_rests())
 		cli_execute("rest");
