@@ -178,11 +178,9 @@ void wobble(effect buff, item source, int turns)
 /*******************************************************/
 void numberology(int digits)
 {
-	if (calcUniverse)
-	{
-		if (cli_execute("numberology " + digits))
-			calcUniverse = FALSE;
-	}
+	//if (calcUniverse)
+	if (cli_execute("numberology " + digits))
+		calcUniverse = FALSE;
 }
 
 /*-----------------------------------------------------
@@ -296,7 +294,7 @@ void buffs(boolean consume)
 	//getUse(1,$item[resolution: be wealthier]);
 	//getUse(1,$item[Meat-inflating powder]);
 	//getChibiBuff();
-	cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat");
+	cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat");
 	cli_execute("summon 2");
 	cli_execute("hatter 22");
 	cli_execute("concert 2");
@@ -398,11 +396,15 @@ void fax()
 /*******************************************************/
 void machineTunnels()
 {
+	int times = 0;
 	use_familiar($familiar[Machine Elf]);
 	if (!have_equipped($item[Mr. Cheeng's spectacles]))
 		equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
-	while(get_property("_machineTunnelsAdv").to_int() < 5)
+	while((get_property("_machineTunnelsAdv").to_int() < 5) && (times < 5))
+	{
 		adv1($location[The Deep Machine Tunnels],-1,"");
+		times+=1;
+	}
 }
 
 /*******************************************************
