@@ -398,8 +398,8 @@ void machineTunnels()
 {
 	int times = 0;
 	use_familiar($familiar[Machine Elf]);
-	if (!have_equipped($item[Mr. Screege's spectacles))
-		equip($slot[acc2],$item[Mr. Screege's spectacles)
+	if (!have_equipped($item[Mr. Screege's spectacles]))
+		equip($slot[acc2],$item[Mr. Screege's spectacles]);
 	if (!have_equipped($item[Mr. Cheeng's spectacles]))
 		equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
 	while((get_property("_machineTunnelsAdv").to_int() < 5) && (times < 5))
