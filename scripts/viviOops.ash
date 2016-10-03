@@ -402,6 +402,8 @@ void machineTunnels()
 		equip($slot[acc2],$item[Mr. Screege's spectacles]);
 	if (!have_equipped($item[Mr. Cheeng's spectacles]))
 		equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
+	if (!have_equipped($item[KoL Con 13 snowglobe]))
+		equip($item[KoL Con 13 snowglobe]);
 	while((get_property("_machineTunnelsAdv").to_int() < 5) && (times < 5))
 	{
 		adv1($location[The Deep Machine Tunnels],-1,"");
@@ -682,12 +684,12 @@ void main()
 		machineTunnels();	
 	if (user_confirm("Use free chess fights?"))
 		chessFight();
-	if (user_confirm("Use free runaways?"))
-		freeRun($location[A Mob of Zeppelin Protesters]);
 	if (user_confirm("Use free bricko fights?"))
 		brickos();
 	if (user_confirm("Use snojo fights?"))
 		snojo();
+	if (user_confirm("Use free runaways?"))
+		freeRun($location[A Mob of Zeppelin Protesters]);
 	if (user_confirm("Use fax & putty copies?"))
 		fax();
 
